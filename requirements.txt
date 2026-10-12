@@ -1,0 +1,16 @@
+# Core data and classical ML (preinstalled on Google Colab)
+numpy
+pandas
+scikit-learn
+
+# Deep learning stack (GPU)
+torch
+transformers>=4.40
+accelerate
+sentence-transformers
+
+# Vector search (CPU build is enough for 550 documents)
+faiss-cpu
+
+# Demo interface
+gradio
