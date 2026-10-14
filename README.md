@@ -1,6 +1,6 @@
 # AI-Powered Procurement and Spare Parts Document Intelligence System
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/halakhalid8991/MAAI902_Assessment2_NLP_Solution_Design_Hala_Sarhan/blob/main/MAAI_902_Prototype.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1VL5ITjzoixE9sAt8vVs_e2MFJ3eCuPCZ?usp=sharing)
 
 **MAAI 902: Natural Language Processing and Large Language Models**
 **Assessment 2: NLP Solution Design** | University of Wollongong in Dubai
