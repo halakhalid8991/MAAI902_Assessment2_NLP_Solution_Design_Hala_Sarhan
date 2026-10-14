@@ -59,7 +59,7 @@ There are no data files to download. The corpus is generated inside the notebook
 ## How to run (Google Colab, recommended)
 
 1. Open `MAAI_902_Prototype.ipynb` in Google Colab with the badge at the top of this page, or from
-   `https://colab.research.google.com/github/halakhalid8991/MAAI902_Assessment2_NLP_Solution_Design_Hala_Sarhan/blob/main/MAAI_902_Prototype.ipynb`.
+   `https://colab.research.google.com/drive/1VL5ITjzoixE9sAt8vVs_e2MFJ3eCuPCZ?usp=sharing`.
 2. **Runtime → Change runtime type → T4 GPU.**
 3. **Runtime → Restart session and run all.** Section 1 sets up the environment and prints `GPU available: True Tesla T4`.
 4. The first run downloads two models from Hugging Face: `sentence-transformers/all-MiniLM-L6-v2` (small) and `Qwen/Qwen2.5-3B-Instruct` (about 6 GB). This takes a few minutes. The language model uses about 6.3 GB of GPU memory and answers in 4 to 6 seconds.
@@ -90,24 +90,6 @@ A CUDA GPU with at least 8 GB of memory is needed for the language model. The em
 
 Everything is seeded (`SEED = 42`), so results reproduce. Small differences in the LLM text may occur between GPU types.
 
-## Using the demo
-
-| Tab | What you do | What you get |
-|---|---|---|
-| **Analyse an email / document** | Enter subject, sender and body (or paste a document), or click an example | Document type, entities, urgency, sentiment (for supplier emails), similar documents |
-| **Batch upload** | Upload several `.txt`, `.eml` or `.csv` files (CSV: one document per row) | One results table for all documents |
-| **Ask the documents** | Type a question | A cited answer, or "Information not found in the available documents." |
-
-Sample files for the Batch upload tab are in `samples/`.
-
-Try the off-topic example question ("Who won the football world cup?") to see the system refuse instead of inventing an answer.
-
-## Ethical design
-
-- **Hallucination control:** a refusal gate (minimum dense similarity 0.53, chosen from the data), mandatory citations, an entity grounding check and a fixed fallback message.
-- **Privacy:** synthetic data only. No personal or confidential data is processed.
-- **Human in the loop:** the system supports decisions. Raising orders, approving payments and contacting suppliers stay with a person.
-- **Fairness and honesty:** unseen-template and noisy-text tests are reported next to the flattering cross-validation score.
 
 ## Limitations
 
@@ -118,18 +100,6 @@ Try the off-topic example question ("Who won the football world cup?") to see th
 - The classifier always chooses one of four document types (there is no "unknown" class).
 - English only. Noise is simulated, so real scans would also need OCR.
 - The grounding check verifies entities but not the relationships between them.
-
-## Demo video
-
-[Add the link to the recorded demonstration here]
-
-## Report
-
-The full technical report is in `report/`. It covers the problem definition, literature review, data, preprocessing and embeddings, pipeline design, evaluation, tool stack, ethics, expected value and limitations.
-
-## Dependencies
-
-`requirements.txt` lists the packages without version pins. The notebook was run on Google Colab (Tesla T4). To pin exact versions, run `pip freeze | grep -iE "torch|transformers|sentence-transformers|faiss|gradio|scikit-learn"` in Colab and copy the output into `requirements.txt`.
 
 ## Author
 
