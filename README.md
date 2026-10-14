@@ -51,7 +51,7 @@ Why two classification numbers? A random split scores 100% because the same temp
 │   ├── po_7001.txt
 │   ├── delay_email.eml
 │   └── supplier_emails.csv
-└── screenshots/                 # GPU check, results summary, Gradio demo
+
 ```
 
 There are no data files to download. The corpus is generated inside the notebook (Section 2).
